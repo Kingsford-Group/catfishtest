@@ -44,11 +44,31 @@ int catcompare::compare()
 {
 	assert(pitems.size() == titems.size());
 
+	int pp = 0;
+	int tt = 0;
+	int xx = 0;
+	int x1 = 0;
+	int x2 = 0;
 	for(int k = 0; k < pitems.size(); k++)
 	{
 		printf("compare item %d: ", k);
-		pitems[k].compare(titems[k]);
+		int p = pitems[k].paths.size();
+		int t = titems[k].paths.size();
+		int x = pitems[k].compare(titems[k]);
+
+		printf("item %d: prediction %d paths, true %d paths, %d equal paths, %.3lf sensitivity, %.3lf precision, %s %s\n", 
+			k, p, t, x, x * 100.0 / p, x * 100.0 / t, (p <= t) ? "TRUE1" : "FALSE1", (x >= t) ? "TRUE2" : "FALSE2");
+
+		pp += p;
+		tt += t;
+		xx += x;
+
+		if(p <= t) x1++;
+		if(x >= t) x2++;
 	}
+	printf("summary: %lu instances, prediction %d paths, true %d paths, %d equal paths, %.3lf sensitivity, %.3lf precision, %.3lf ratio1, %.3lf ratio2\n", 
+			pitems.size(), pp, tt, xx, xx * 100.0 / pp, xx * 100.0 / tt, x1 * 100.0 / pitems.size(), x2 * 100.0 / pitems.size());
+
 	return 0;
 }
 

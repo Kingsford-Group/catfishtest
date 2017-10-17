@@ -22,9 +22,7 @@ int catitem::compare(const catitem &ci)
 		}
 	}
 
-	printf("prediction %lu paths, true %lu paths, %d equal paths, %.2lf sensitivity, %.2lf precision, %s\n", 
-			paths.size(), ci.paths.size(), x, x * 100.0 / paths.size(), x * 100.0 / ci.paths.size(), (x == ci.paths.size()) ? "TRUE" : "FALSE");
-	return 0;
+	return x;
 }
 
 int catitem::clear()
