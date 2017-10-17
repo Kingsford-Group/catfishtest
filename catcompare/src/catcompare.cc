@@ -51,7 +51,6 @@ int catcompare::compare()
 	int x2 = 0;
 	for(int k = 0; k < pitems.size(); k++)
 	{
-		printf("compare item %d: ", k);
 		int p = pitems[k].paths.size();
 		int t = titems[k].paths.size();
 		int x = pitems[k].compare(titems[k]);
