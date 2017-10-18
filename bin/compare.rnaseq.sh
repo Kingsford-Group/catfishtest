@@ -2,7 +2,7 @@
 
 bin=`pwd`
 data=`pwd`/../data/rnaseq
-results=`pwd`/../results/rnaseq.v0.2.1
+results=`pwd`/../results/rnaseq.v0.1.4
 scripts=`pwd`/scripts
 
 rm -rf $scripts
@@ -17,10 +17,16 @@ do
 	do
 		kk=${k/.truth/}
 
-		echo "$bin/catcompare $dir2/$kk.full.out $dir1/$k > $dir2/$kk.full.cmp" >> $scripts
-		echo "$bin/catcompare $dir2/$kk.greedy.out $dir1/$k > $dir2/$kk.greedy.cmp" >> $scripts
+		mv $dir2/$kk.full.out $dir2/$kk.full.out0
+		mv $dir2/$kk.greedy.out $dir2/$kk.greedy.out0
+		cat $dir2/$kk.full.out0 | sed 's/path .*, weight = \(.*\), vertices = /\1 /g' > $dir2/$kk.full.out
+		cat $dir2/$kk.greedy.out0 | sed 's/path .*, weight = \(.*\), vertices = /\1 /g' > $dir2/$kk.greedy.out
+		$bin/catcompare $dir2/$kk.full.out $dir1/$k > $dir2/$kk.full.cmp
+		$bin/catcompare $dir2/$kk.greedy.out $dir1/$k > $dir2/$kk.greedy.cmp
 
+		#echo "$bin/catcompare $dir2/$kk.full.out $dir1/$k > $dir2/$kk.full.cmp" >> $scripts
+		#echo "$bin/catcompare $dir2/$kk.greedy.out $dir1/$k > $dir2/$kk.greedy.cmp" >> $scripts
 	done
 done
 
-nohup cat $scripts | xargs -L 1 -P 30 -I CMD bash -c CMD &
+#nohup cat $scripts | xargs -L 1 -P 30 -I CMD bash -c CMD &
