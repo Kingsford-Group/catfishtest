@@ -36,6 +36,7 @@ int catcompare::build_catitems(const string &file, vector<catitem> &items)
 			ci.add_path(v);
 		}
 	}
+	if(ci.header != "") items.push_back(ci);		
 
 	return 0;
 }
