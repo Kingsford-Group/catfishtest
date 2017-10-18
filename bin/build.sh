@@ -52,4 +52,3 @@ do
 	nohup ./accuracy.sh $dir1/$k > $dir2/$k.acc &
 	nohup ./time.sh $dir1/$k > $dir2/$k.time &
 done
-
