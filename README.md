@@ -40,10 +40,10 @@ the ground truth decompositions.
 We provide scripts in `bin` to run and analysis the results for the two datasets.
 You need to link the binary `catfish` to `bin` before using these scripts.
 
-1, `run.rnaseq.sh`: run `catfish` and the greedy algorithm on **rnaseq** dataset.
-2, `run.simulate.sh`: run `catfish` and the greedy algorithm on **simulation** dataset.
-3, `compare.rnase.sh`: compare the predictions of both methods with the ground truth decompositions for **rnaseq** dataset.
-4, `compare.simulation.sh`: compare the predictions of both methods with the ground truth decompositions for **simulation** dataset.
-5, `stat.rnaseq.sh`: collect results for the **rnaseq** dataset (used for Figures 10--13 and Table 1).
-6, `stat.simulate.sh`: collect results for the **rnaseq** dataset (used for Table 2 and Table 3).
-7, `stat.truth.sh`: collect statistics for ground-truth decompositions (used for Figure 8 and Figure 9).
+1. `run.rnaseq.sh`: run `catfish` and the greedy algorithm on **rnaseq** dataset.
+2. `run.simulate.sh`: run `catfish` and the greedy algorithm on **simulation** dataset.
+3. `compare.rnase.sh`: compare the predictions of both methods with the ground truth decompositions for **rnaseq** dataset.
+4. `compare.simulation.sh`: compare the predictions of both methods with the ground truth decompositions for **simulation** dataset.
+5. `stat.rnaseq.sh`: collect results for the **rnaseq** dataset (used for Figures 10--13 and Table 1).
+6. `stat.simulate.sh`: collect results for the **rnaseq** dataset (used for Table 2 and Table 3).
+7. `stat.truth.sh`: collect statistics for ground-truth decompositions (used for Figure 8 and Figure 9).
