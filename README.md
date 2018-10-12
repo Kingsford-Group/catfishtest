@@ -3,7 +3,7 @@
 This repository provides tools and scripts to evaluate
 [**catfish**](https://github.com/Kingsford-Group/catfish), which implements an efficient
 heuristic for the minimum path flow decomposition problem.
-Please refer to our pre-print at [bioRxiv](https://www.biorxiv.org/content/early/2016/11/16/087759).
+Please refer to our [paper](https://doi.org/10.1109/TCBB.2017.2779509).
 
 # Datasets
 We used two datasets to evaluate `catfish`, namely **rnaseq** and **simulation**.
