@@ -7,7 +7,7 @@ Please refer to our pre-print at [bioRxiv](https://www.biorxiv.org/content/early
 
 # Datasets
 We used two datasets to evaluate `catfish`, namely **rnaseq** and **simulation**.
-They are available at [CMU box](https://cmu.app.box.com/s/p687exyr279wny7fb2rb36wifvavvu3f).
+They are available at [zenodo](https://doi.org/10.5281/zenodo.1460998).
 The first dataset, **rnaseq**, contains four sets of perfect splice graphs with different species.
 The second dataset, **simulation**, contains two sets of randomly simulated flow graphs with
 different parameter settings. For both datasets, we provide input instances and ground truth 
